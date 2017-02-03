@@ -1,15 +1,20 @@
-//AUTOBOT 01022017
+//AUTOBOT
 //un véhicule autonome basé sur NodeMCU + shield  avec sonar et 4 moteurs
+//
+//On définit l'angle de capture de distance
 int DistLeft;
 int DistMid;
 int DistRight;
+
 //on  insère la librairie newping
 #include <NewPing.h>
 
 //on définit les pins ECHO & TRIGGER du sonar
 NewPing sonar(D6, D7, 100);
 
-// on définit des action en attribuant des valeurs aux moteurs sur les PINS suivants
+// on définit des action en attribuant des valeurs aux moteurs sur les PINS suivant
+//moteur gauche D5 - sens de rotation sur D0 en HIGH ou LOW
+//moteur gauche D4 - sens de rotation sur D2 en HIGH ou LOW
 //PINS 4 & 5 en analogWrite de 0 à 1023
 //PINS 0 & 2 en digitalWrite  à 0 ou 1
 void stop(void)
